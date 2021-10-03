@@ -80,8 +80,7 @@ h3 {
     font-family: "Lora";
 }
 img {
-    width: 500px;
-    max-width: 100%;
+    max-width: 30%;
     border-radius: 10px;
     text-align: center;
 }
@@ -113,6 +112,7 @@ pre {
 .outline-4 {
     margin-left: 0.5em; 
 }
+
 .outline-text-4 {
     margin-left: 0.5em;
 } 
