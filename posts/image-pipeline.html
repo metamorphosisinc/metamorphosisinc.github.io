@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-10-03 Sun 04:44 -->
+<!-- 2021-10-03 Sun 04:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -222,32 +222,32 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org69d7807">Image Workflows for Interactive CYOA</a>
+<li><a href="#org1530e3f">Image Workflows for Interactive CYOA</a>
 <ul>
-<li><a href="#org98528da">Cropping Images</a></li>
+<li><a href="#org619e338">Cropping Images</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org69d7807" class="outline-2">
-<h2 id="org69d7807">Image Workflows for Interactive CYOA</h2>
-<div class="outline-text-2" id="text-org69d7807">
+<div id="outline-container-org1530e3f" class="outline-2">
+<h2 id="org1530e3f">Image Workflows for Interactive CYOA</h2>
+<div class="outline-text-2" id="text-org1530e3f">
 <p>
 Most CYOAs tend to contain a lot of images, especially high resolution images of various pieces of artwork. Wheras editing CYOAs together in programs such as Gimp, Inkscape, Photoshop or Illustrator tends to naturally resize these images, interactive CYOA often send over full size images with only a <code>width:XXXpx;</code> to constrain their size. This causes both issues with image proportions, and with the sheer amount of data that needs to be transmitted. Across the dozens of large images involved, this may mean certain CYOAs might take minutes before anything shows up at all. Let's fix that.
 </p>
 </div>
 
-<div id="outline-container-org98528da" class="outline-3">
-<h3 id="org98528da">Cropping Images</h3>
-<div class="outline-text-3" id="text-org98528da">
+<div id="outline-container-org619e338" class="outline-3">
+<h3 id="org619e338">Cropping Images</h3>
+<div class="outline-text-3" id="text-org619e338">
 <p>
 Assuming we have two images of artwork, one wide, one tall. We constrain them to a certain width, add appropriate margins, put our option text and title below them.
 </p>
 
 
-<div id="orgaace5f8" class="figure">
+<div id="orgd03c56a" class="figure">
 <p><img src="image-pipeline_images/image-proportions.png" alt="image-proportions.png" />
 </p>
 </div>
@@ -257,7 +257,7 @@ The wider image now takes up less vertical space than the taller image, which ca
 </p>
 
 
-<div id="org9e76360" class="figure">
+<div id="orgd016062" class="figure">
 <p><img src="image-pipeline_images/square-proportions.png" alt="square-proportions.png" />
 </p>
 </div>
@@ -267,7 +267,7 @@ Replacing both images with ones that have the same proportions, in this case squ
 </p>
 
 
-<div id="org18a81cf" class="figure">
+<div id="orgfa72edb" class="figure">
 <p><img src="image-pipeline_images/squished-proportions.png" alt="squished-proportions.png" />
 </p>
 </div>
@@ -293,12 +293,14 @@ Once you are satisfied with your selection, you'll want to select <code>Image &g
 </p>
 
 <p>
-Next, we want to export the image via <code>File &gt; Export</code> [ <code>Ctrl+E</code> ]. You'll want to name the image, and set its file type. Since we'll be using these for an online CYOA, we'll use the webp format, which generally produces smaller image sizes than png or jpeg. To do so, you can simply name it <code>filename.webp</code>.
+Next, we want to export the image via <code>File &gt; Export</code> [ <code>Ctrl+E</code> ]. You'll want to name the image, and set its file type. Since we'll be using these for an online CYOA, we'll use the webp format, which generally produces smaller image sizes than png or jpeg. To do so, you can simply name it =filename.
 </p>
 
-<p>
-<a href="image-pipeline_images/cropped-image.webp">image-pipeline_images/cropped-image.webp</a>
+
+<div id="org9f5d7af" class="figure">
+<p><img src="image-pipeline_images/cropped-image.png" alt="cropped-image.png" />
 </p>
+</div>
 
 <p>
 Whilst the primary benefit of pre-cropping images is consistent layout in your CYOA, this particular crop and export already reduced the size of the image from 164kB to 30.8kB, roughly a five fold reduction. 
